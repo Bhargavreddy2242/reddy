@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unified Registration Form</title>
+
+  <!-- Internal CSS for Parent Details -->
+  <style>
+    .parent-row th, .parent-row td {
+      background-color: #f3e6ff;
+      color: darkmagenta;
+      font-family: Georgia, serif;
+      padding: 8px;
+	text-decoration: underline;
+    }
+  </style>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<center>
+  <h1 style="color: crimson; text-decoration: underline;">Santhiram Engineering College</h1>
+  <h2 style="color: black; text-decoration: underline;">Student Registration Form</h2>
+
+  <form>
+    <table border="2" cellspacing="0" cellpadding="10" style="width: 80%;">
+      
+      <!-- Student Details (Inline CSS) -->
+      <tr>
+        <th colspan="2" style="background-color: #e6f3ff; color: navy; font-family: Arial, sans-serif; text-decoration: underline;">Student Details</th>
+      </tr>
+      <tr style="background-color: #e6f3ff;">
+        <td><b>Name</b></td>
+        <td><input type="text" name="sname" style="width: 90%; padding: 5px;"></td>
+      </tr>
+      <tr style="background-color: #e6f3ff;">
+        <td><b>Registration No</b></td>
+        <td><input type="text" name="regno" style="width: 90%; padding: 5px;"></td>
+      </tr>
+      <tr style="background-color: #e6f3ff;">
+        <td><b>Date of Birth</b></td>
+        <td><input type="date" name="dob" style="width: 90%; padding: 5px;"></td>
+      </tr>
+      <tr style="background-color: #e6f3ff;">
+        <td><b>Gender</b></td>
+        <td>
+          <input type="radio" name="gnd">Male
+          <input type="radio" name="gnd">Female
+          <input type="radio" name="gnd">Other
+        </td>
+      </tr>
+	
+ <tr style="background-color: #e6f3ff;">
+<th align=left style="color: red;">Blood Group</th>
+<td>
+<select name="bg" id="id">
+<option value="A+">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+<option value="AB+">AB+</option>
+<option value="AB-">AB-</option>
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+</select>
+</td>
+</tr>
+
+      <!-- Parent Details (Internal CSS) -->
+      <tr class="parent-row">
+        <th colspan="2" >Parent Details</th>
+      </tr>
+      <tr class="parent-row">
+        <td><b>Father's Name</b></td>
+        <td><input type="text" name="fname"></td>
+      </tr>
+      <tr class="parent-row">
+        <td><b>Mother's Name</b></td>
+        <td><input type="text" name="mname"></td>
+      </tr>
+      <tr class="parent-row">
+        <td><b>Parent's Phone</b></td>
+        <td><input type="tel" name="pmobile"></td>
+      </tr>
+      <tr class="parent-row">
+        <td><b>Email</b></td>
+        <td><input type="email" name="email"></td>
+      </tr>
+      <tr class="parent-row">
+        <td><b>Address</b></td>
+        <td><textarea name="address" rows="3" cols="30"></textarea></td>
+      </tr>
+
+      <!-- Academic Details (External CSS) -->
+<tr class="academic-row">
+  <th colspan="2">Academic Performance (Marks and Credits)</th>
+</tr>
+<tr class="academic-row">
+  <td>Year</td>
+  <td>
+    <select name="marks_year" required>
+      <option value="">--Select Year--</option>
+      <option value="1st Year">1st Year</option>
+      <option value="2nd Year">2nd Year</option>
+      <option value="3rd Year">3rd Year</option>
+      <option value="4th Year">4th Year</option>
+    </select>
+  </td>
+</tr>
+<tr class="academic-row">
+  <td>Semester</td>
+  <td>
+    <select name="semester" required>
+      <option value="">--Select Semester--</option>
+      <option value="1st Semester">1st Semester</option>
+      <option value="2nd Semester">2nd Semester</option>
+    </select>
+  </td>
+</tr>
+<tr class="academic-row">
+  <td>Total Marks</td>
+  <td><input type="number" name="total_marks" placeholder="e.g., 1000"></td>
+</tr>
+<tr class="academic-row">
+  <td>Marks Obtained</td>
+  <td><input type="number" name="marks_obtained" placeholder="e.g., 875"></td>
+</tr>
+<tr class="academic-row">
+  <td>Percentage</td>
+  <td><input type="text" name="percentage" placeholder="e.g., 87.5%"></td>
+</tr>
+<tr class="academic-row">
+  <td>Subject-wise Credits & Grades</td>
+  <td>
+    <table border="1" cellpadding="5" cellspacing="0" style="width: 100%;">
+      <tr>
+        <th>Subject</th>
+        <th>Credits</th>
+        <th>Grade</th>
+      </tr>
+      <tr>
+        <td><input type="text" name="sub1" placeholder="Subject-1"></td>
+        <td><input type="number" name="credit1" min="0"></td>
+        <td>
+          <select name="grade1" required>
+            <option value="">--Select Grade--</option>
+            <option>A</option><option>B</option><option>C</option>
+            <option>D</option><option>E</option><option>F</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" name="sub2" placeholder="Subject-2"></td>
+        <td><input type="number" name="credit2" min="0"></td>
+        <td>
+          <select name="grade2" required>
+            <option value="">--Select Grade--</option>
+            <option>A</option><option>B</option><option>C</option>
+            <option>D</option><option>E</option><option>F</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" name="sub3" placeholder="Subject-3"></td>
+        <td><input type="number" name="credit3" min="0"></td>
+        <td>
+          <select name="grade3" required>
+            <option value="">--Select Grade--</option>
+            <option>A</option><option>B</option><option>C</option>
+            <option>D</option><option>E</option><option>F</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" name="sub4" placeholder="Subject-4"></td>
+        <td><input type="number" name="credit4" min="0"></td>
+        <td>
+          <select name="grade4" required>
+            <option value="">--Select Grade--</option>
+            <option>A</option><option>B</option><option>C</option>
+            <option>D</option><option>E</option><option>F</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" name="sub5" placeholder="Subject-5"></td>
+        <td><input type="number" name="credit5" min="0"></td>
+        <td>
+          <select name="grade5" required>
+            <option value="">--Select Grade--</option>
+            <option>A</option><option>B</option><option>C</option>
+            <option>D</option><option>E</option><option>F</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="academic-row">
+  <td>Total Credits Earned</td>
+  <td><input type="number" name="total_credits" placeholder="e.g., 24"></td>
+</tr>
+<tr class="academic-row">
+  <td>Password</td>
+  <td><input type="password" name="password"></td>
+</tr>
+<!-- Continue rest of the form as is (Course, Branch, Skills, Academic, etc.) -->
+<!-- Submit and Reset buttons -->
+<tr>
+  <td colspan="2" align="center">
+    <input type="submit" name="Sub" value="submit">
+    <input type="reset" name="res" value="reset">
+  </td>
+</tr>
+
+
